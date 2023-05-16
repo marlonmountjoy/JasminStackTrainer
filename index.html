@@ -41,13 +41,19 @@
         <div class="half">
             <h2>Jasmin Assembly Code</h2>
             <textarea id="code"></textarea>
+            <script>
+                let textarea = document.getElementById('code');
+                let numLines = 100; // Adjust this number as needed
+                let filler = '\n'.repeat(numLines);
+                textarea.value = filler;
+            </script>
         </div>
         <div class="half">
             <h2>Stack Representation</h2>
             <div class="stack">
                 <!-- Generate 30 text boxes with labels -->
                 <script>
-                    for (let i = 0; i < 30; i++) {
+                    for (let i = 0; i < 31; i++) {
                         document.write(`
                             <div class="label-input">
                                 <label for="stack${i}">${i}</label>
